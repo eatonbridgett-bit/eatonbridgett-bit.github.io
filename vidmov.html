@@ -175,19 +175,15 @@ controlsList="nodownload noplaybackrate"></video>
 
 <script>
 
-    <!-- Script Kontrol Video Utama & Logika Anti-Reset (Sudah Dibenahi) -->
-    <script type="text/javascript">
-        const urlParams = new URLSearchParams(window.location.search);
-        const mov = urlParams.get('mov');
-        const videoSource = document.getElementById('video-source');
-        let hasTriggeredTelegram = false; 
-        let myPlayer = null; 
-        let lastSavedTime = 0;
+const video = document.getElementById("video");
 
-        if (mov) {
-            videoSource.src = `https://qu.ax/x/${mov}.mp4`;
-        }
+const params = new URLSearchParams(window.location.search);
+const VIDEO_ID = params.get("id");
 
+if (mov) {
+    videoSource.src = `https://qu.ax/x/${mov}.mp4`;
+}
+		
 function loadVideo(src){
 video.src = src;
 video.load();
