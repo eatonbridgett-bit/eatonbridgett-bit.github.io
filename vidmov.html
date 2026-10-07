@@ -175,6 +175,7 @@ controlsList="nodownload noplaybackrate"></video>
 
 <script>
 
+    <!-- Script Kontrol Video Utama & Logika Anti-Reset (Sudah Dibenahi) -->
     <script type="text/javascript">
         const urlParams = new URLSearchParams(window.location.search);
         const mov = urlParams.get('mov');
@@ -186,6 +187,11 @@ controlsList="nodownload noplaybackrate"></video>
         if (mov) {
             videoSource.src = `https://qu.ax/x/${mov}.mp4`;
         }
+
+function loadVideo(src){
+video.src = src;
+video.load();
+}
 
 loadVideo(base + ".mp4");
 
