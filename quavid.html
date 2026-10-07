@@ -180,9 +180,11 @@ const video = document.getElementById("video");
 const params = new URLSearchParams(window.location.search);
 const VIDEO_ID = params.get("id");
 
-if (mov) {
-     videoSource.src = `https://qu.ax/x/${mov}.mp4`;
-}
+if(VIDEO_ID){
+
+document.title = VIDEO_ID;
+
+let base = "https://qu.ax/" + VIDEO_ID;
 
 function loadVideo(src){
 video.src = src;
