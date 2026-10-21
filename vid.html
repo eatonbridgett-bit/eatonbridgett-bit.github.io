@@ -157,12 +157,20 @@ background:#1d4ed8;
 
 <div class="video-wrapper">
 
-<video
-id="video"
-autoplay
-playsinline
-controls
-controlsList="nodownload noplaybackrate"></video>
+</style>
+</head>
+
+<body oncontextmenu="return false">
+
+<div class="video-wrapper">
+
+  <video id="video"
+    autoplay
+    muted
+    playsinline
+    controls
+    controlsList="nodownload noplaybackrate">
+  </video>
 
   <!-- CONTINUE WATCHING -->
   <div class="continue-overlay" id="continueOverlay">
@@ -182,6 +190,8 @@ controlsList="nodownload noplaybackrate"></video>
   </div>
 
 </div>
+
+<script>
 
 <footer>
 © 2026 BuddieFun
