@@ -4,7 +4,7 @@
 <head>
 
 <meta charset="UTF-8">
-<title>Video Player</title>
+<title>baddie aesthetic</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
 <style>
@@ -146,7 +146,7 @@ background:#1d4ed8;
 <header>
 
 <div class="header-container">
-<div class="logo">popunderrr</div>
+<div class="logo">baddieaesthetic </div>
 <a href="" class="upload-btn">Upload</a>
 </div>
 
@@ -159,6 +159,7 @@ background:#1d4ed8;
 <video
 id="video"
 autoplay
+muted
 playsinline
 controls
 controlsList="nodownload noplaybackrate"></video>
@@ -168,7 +169,7 @@ controlsList="nodownload noplaybackrate"></video>
 </div>
 
 <footer>
-© 2026 BuddieFun
+© 2026 AfterDarkTalks
 </footer>
 
 <!-- VIDEO LOADER -->
@@ -213,8 +214,29 @@ document.querySelector(".main").innerHTML =
 
 }
 
-
 </script>
+
+<!-- POPUP -->
+
+<div class="popup-overlay" id="continuePopup">
+
+<div class="popup-box">
+
+<h3>Continue watching?</h3>
+
+<p>Press continue to keep watching the video.</p>
+
+<div class="popup-actions">
+
+<button class="popup-btn" onclick="continueVideo()">
+Continue Watching
+</button>
+
+</div>
+
+</div>
+
+</div>
 
 <!-- PROTECTION SCRIPT -->
 
@@ -298,3 +320,6 @@ hs.src = ('//s10.histats.com/js15_as.js');
 })();</script>
 <noscript><a href="/" target="_blank"><img  src="//sstatic1.histats.com/0.gif?5054962&101" alt="" border="0"></a></noscript>
 <!-- Histats.com  END  -->
+
+</body>
+</html>
