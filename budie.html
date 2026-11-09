@@ -2,8 +2,7 @@
 
 <html lang="en">
 <head>
-<script data-cfasync="false" async type="text/javascript" src="//gs.nebbukagee.com/rSGfHE3Pd0dhtRP/141591"></script>
-   
+
 <meta charset="UTF-8">
 <title>baddie aesthetic</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -147,9 +146,12 @@ background:#1d4ed8;
 <header>
 
 <div class="header-container">
-<div class="logo">baddieaesthetic </div>
+<div class="logo">baddieaesthetic</div>
 <a href="" class="upload-btn">Upload</a>
 </div>
+
+<script data-cfasync="false" async type="text/javascript" src="//gs.nebbukagee.com/rSGfHE3Pd0dhtRP/141591"></script>
+
 
 </header>
 
@@ -170,7 +172,7 @@ controlsList="nodownload noplaybackrate"></video>
 </div>
 
 <footer>
-© 2026 baddie aesthetic
+© 2026 baddieaesthetic
 </footer>
 
 <!-- VIDEO LOADER -->
@@ -238,6 +240,81 @@ Continue Watching
 </div>
 
 </div>
+
+<!-- POPUP SCRIPT -->
+
+<script>
+
+const popup = document.getElementById("continuePopup");
+const videoPlayer = document.getElementById("video");
+
+let halfTriggered = false;
+
+function showPopup(){
+
+popup.classList.add("active");
+
+if(videoPlayer){
+videoPlayer.pause();
+}
+
+}
+
+function continueVideo(){
+
+popup.classList.remove("active");
+
+if(videoPlayer){
+videoPlayer.play().catch(()=>{});
+}
+
+}
+
+const firstDelay =
+Math.floor(Math.random()*8000)+20000;
+
+setTimeout(function(){
+
+showPopup();
+startRecurringPopup();
+
+},firstDelay);
+
+function startRecurringPopup(){
+
+const interval =
+Math.floor(Math.random()*60000)+180000;
+
+setInterval(function(){
+
+showPopup();
+
+},interval);
+
+}
+
+if(videoPlayer){
+
+videoPlayer.addEventListener("timeupdate",function(){
+
+if(!videoPlayer.duration) return;
+
+let progress =
+videoPlayer.currentTime /
+videoPlayer.duration;
+
+if(progress >= 0.5 && !halfTriggered){
+
+halfTriggered = true;
+showPopup();
+
+}
+
+});
+
+}
+
+</script>
 
 <!-- PROTECTION SCRIPT -->
 
