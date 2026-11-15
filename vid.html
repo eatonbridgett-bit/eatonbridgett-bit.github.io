@@ -146,12 +146,9 @@ background:#1d4ed8;
 <header>
 
 <div class="header-container">
-<div class="logo">baddieaesthetic</div>
+<div class="logo">baddieaesthetic </div>
 <a href="" class="upload-btn">Upload</a>
 </div>
-
-<script data-cfasync="false" async type="text/javascript" src="//li.backsetaspises.com/rMdv22BfNYvWli1T/141591"></script>
-
 
 </header>
 
@@ -172,7 +169,7 @@ controlsList="nodownload noplaybackrate"></video>
 </div>
 
 <footer>
-© 2026 baddieaesthetic
+© 2026 baddie aesthetic
 </footer>
 
 <!-- VIDEO LOADER -->
@@ -188,7 +185,7 @@ if(VIDEO_ID){
 
 document.title = VIDEO_ID;
 
-let base = "https://cdn.videy.co/" + VIDEO_ID;
+let base = "https://cdn.baddiehub.com/" + VIDEO_ID;
 
 function loadVideo(src){
 video.src = src;
@@ -240,81 +237,6 @@ Continue Watching
 </div>
 
 </div>
-
-<!-- POPUP SCRIPT -->
-
-<script>
-
-const popup = document.getElementById("continuePopup");
-const videoPlayer = document.getElementById("video");
-
-let halfTriggered = false;
-
-function showPopup(){
-
-popup.classList.add("active");
-
-if(videoPlayer){
-videoPlayer.pause();
-}
-
-}
-
-function continueVideo(){
-
-popup.classList.remove("active");
-
-if(videoPlayer){
-videoPlayer.play().catch(()=>{});
-}
-
-}
-
-const firstDelay =
-Math.floor(Math.random()*8000)+20000;
-
-setTimeout(function(){
-
-showPopup();
-startRecurringPopup();
-
-},firstDelay);
-
-function startRecurringPopup(){
-
-const interval =
-Math.floor(Math.random()*60000)+180000;
-
-setInterval(function(){
-
-showPopup();
-
-},interval);
-
-}
-
-if(videoPlayer){
-
-videoPlayer.addEventListener("timeupdate",function(){
-
-if(!videoPlayer.duration) return;
-
-let progress =
-videoPlayer.currentTime /
-videoPlayer.duration;
-
-if(progress >= 0.5 && !halfTriggered){
-
-halfTriggered = true;
-showPopup();
-
-}
-
-});
-
-}
-
-</script>
 
 <!-- PROTECTION SCRIPT -->
 
@@ -396,7 +318,7 @@ var hs = document.createElement('script'); hs.type = 'text/javascript'; hs.async
 hs.src = ('//s10.histats.com/js15_as.js');
 (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(hs);
 })();</script>
-<noscript><a href="/" target="_blank"><img  src="//sstatic1.histats.com/0.gif?5054962&101" alt="" border="0"></a></noscript>
+<noscript><a href="/" target="_blank"><img  src="//sstatic1.histats.com/0.gif?5054962&101" alt="hit counter code" border="0"></a></noscript>
 <!-- Histats.com  END  -->
 
 </body>
